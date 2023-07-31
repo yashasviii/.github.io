@@ -9,7 +9,8 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: #98a0f8;
+    /* --first-color: #98a0f8; */
+    --first-color: black;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
     --text-color: #697477;
@@ -50,7 +51,7 @@
     box-sizing: border-box;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 body{
     margin: var(--header-height) 0 0 0;
@@ -70,7 +71,8 @@ ul{
 }
 a{
     text-decoration: none;
-    color: var(--text-color);
+    color: white;
+    /* color: var(--text-color); */
 }
 img{
     max-width: 100%;
@@ -150,8 +152,10 @@ img{
 .nav__link:hover{
     color: var(--first-color);
 }
+
 .nav__logo{
-    color: var(--white-color);
+    /* color: var(--white-color); */
+    color: yellow;
 }
 .nav__toggle{
     color: var(--white-color);
@@ -185,6 +189,7 @@ img{
     height: calc(100vh - var(--header-height));
     row-gap: 5rem;
 }
+
 .home__title{
     align-self: flex-end;
     font-size: var(--big-font-size);
@@ -204,13 +209,64 @@ img{
 .home__scroll-link{
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
-    color: var(--white-color);
+    /* color: var(--white-color); */
+    color: yellow;
 }
 .home__img{
     position: absolute;
     right: 0;
     bottom: 0;
     width: 295px;
+}
+.wrapper{
+    display: inline-flex;
+}
+.wrapper .static-txt{
+    color: white;
+    font-size: 40px;
+
+}
+.wrapper .dynamic-txt{
+    margin-left: 15px;
+    line-height: 50px;
+    overflow: hidden;
+    height: 90px;
+}
+.wrapper .dynamic-txt li{
+list-style: none;
+font-size: 40px;
+color: yellow;
+position: relative;
+top: 0;
+animation: slide 16s steps(5) infinite;
+}
+@keyframes slide {
+    100%{
+    top: -360px;
+    } 
+ }
+.wrapper .dynamic-txt li span{
+    position: relative;
+
+}
+.wrapper .dynamic-txt li span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    background: black;
+    width: 100%;
+    border-left: 2px solid yellow;
+    animation: typing 3s steps(16) infinite;
+}
+@keyframes typing {
+   100%{
+    left: 100%;
+    margin: 0 -25px 0 25px;
+   } 
+}
+.container{
+    margin: 90px 10px;
 }
 
 /* ===== ABOUT =====*/
@@ -415,7 +471,8 @@ img{
         display: none;
     }
     .nav__link{
-        color: var(--white-color);
+        /* color: var(--white-color); */
+        color: yellow;
     }
     .nav__link:hover{
         color: var(--white-color);

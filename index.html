@@ -41,18 +41,29 @@
             <section class="home" id="home">
                 <div class="home__container bd-grid">
                     <h1 class="home__title"><span>Yashasvi</span><br>Singh</h1>
-<div class="container">
-    <div class="wrapper">
-        <div class="static-txt">I'm a</div>
-        <ul class="dynamic-txt">
-            <li><span>Web Developer</span></li>
-            <li><span>Designer</span></li>
-            <li><span>UI/UX Designer</span></li>
-            <li><span>Content Writer</span></li>
-            <li><span>Technical Writer</span></li>
-        </ul>
-    </div>
-</div>
+                    <div class="container">
+                        <span class="text first-text">I'm a</span>
+                        <span class="text sec-text">Developer</span>
+                    </div>
+                
+                    <script>
+                        const text = document.querySelector(".sec-text");
+                
+                        const textLoad = () => {
+                            setTimeout(() => {
+                                text.textContent = "Developer";
+                            }, 0);
+                            setTimeout(() => {
+                                text.textContent = "Designer";
+                            }, 4000);
+                            setTimeout(() => {
+                                text.textContent = "Coder";
+                            }, 8000); //1s = 1000 milliseconds
+                        }
+                
+                        textLoad();
+                        setInterval(textLoad, 12000);
+                    </script>
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
                     </div>

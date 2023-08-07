@@ -83,11 +83,12 @@ img{
 /*===== CLASS CSS ===== */
 .section{
     padding: 3rem 0;
+    background-color: #181818;
 }
 .section-title{
     position: relative;
     font-size: var(--h2-font-size);
-    color: var(--dark-color);
+    color: yellow;
     margin: var(--mb-4) 0;
     text-align: center;
 }
@@ -100,7 +101,7 @@ img{
     right: 0;
     margin: auto;
     top: 2rem;
-    background-color: var(--first-color);
+    background-color: white;
 }
 
 /*===== LAYOUT =====*/
@@ -130,6 +131,7 @@ img{
     align-items: center;
 }
 @media screen and (max-width: 768px){
+    background-color: overscroll-behavior-block;
     .nav__menu{
         position: fixed;
         top: var(--header-height);
@@ -330,15 +332,19 @@ animation: slide 6s steps(5) infinite;
 }
 .about__subtitle{
     font-size: var(--h2-font-size);
-    color: var(--first-color);
+    color: yellow;
     margin-bottom: var(--mb-1);
 }
 .about__text{
+    width: 900px;
+    color: white; /*about k text ka colour yaha se change hoga*/
     margin-bottom: var(--mb-4);
 }
 .about__profession{
     display: block;
     margin-bottom: var(--mb-4);
+    color: white;
+    font-size: 1.8rem;
 }
 .about__social-icon{
     font-size: 1.4rem;
@@ -591,6 +597,9 @@ animation: slide 6s steps(5) infinite;
 
 /* ---------------------------------------------------------------- */
 /* *{
+    jab bhi koiparticular element m change krna ho na inspect ele
+    element ye ya ye dekhna hoo ki konsi class h, to us element
+    pe click krke dekh, btata hu
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -603,6 +612,7 @@ animation: slide 6s steps(5) infinite;
   }
   .wrapper{
     display: flex;
+    bas
   }
   .wrapper .static-txt{
     color: #0061a2;
@@ -629,6 +639,8 @@ animation: slide 6s steps(5) infinite;
       top: -360px;
     }
   }
+
+ dekho theek h?ruk
   .dynamic-txts li span{
     position: relative;
     margin: 5px 0;
